@@ -23,7 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Transactional
 @Controller
-@RequestMapping("pessoas-fisica")
+@RequestMapping("pessoasFisica")
 public class PessoaFController {
 
     @Autowired

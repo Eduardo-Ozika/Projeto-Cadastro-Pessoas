@@ -11,13 +11,15 @@
                 <tr>
                     <th>Id</th>
                     <th>Nome</th>
+                    <th>CNPJ</th>
                 </tr>
             </thead>
             <tr th:each="p : ${pessoa}">
                 <td th:text="${p.id}"> </td>
-                <td th:text="${p.descricao}"> </td>
-                <td> <a th:href="@{/pessoas/edit/{id}(id=${p.id})}">Editar</a> </td>
-                <td> <a onclick="return window.confirm('Tem certeza que deseja excluir este registro?')"  th:href="@{/pessoa/remove/{id}(id=${p.id})}">Excluir</a> </td>
+                <td th:text="${p.nome}"> </td>
+                <td th:text="${p.cnpj}"> </td>
+                <td> <a th:href="@{/pessoasJuridica/edit/{id}(id=${p.id})}">Editar</a> </td>
+                <td> <a onclick="return window.confirm('Tem certeza que deseja excluir este registro?')"  th:href="@{/pessoasJuridica/remove/{id}(id=${p.id})}">Excluir</a> </td>
             </tr>
         </table>
 

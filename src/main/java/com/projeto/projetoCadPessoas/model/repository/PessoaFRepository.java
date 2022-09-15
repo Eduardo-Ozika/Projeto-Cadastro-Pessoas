@@ -29,7 +29,7 @@ public class PessoaFRepository {
     }
 
     public List<PessoaFisica> pessoas(){
-        Query query = em.createQuery("from Pessoa");
+        Query query = em.createQuery("from PessoaFisica");
         return query.getResultList();
     }
 

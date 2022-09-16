@@ -42,8 +42,8 @@ public class PessoaFController {
     }
     
     @PostMapping("/save")
-    public ModelAndView save(PessoaFisica pessoa){
-        repository.save(pessoa);
+    public ModelAndView save(PessoaFisica pessoaFisica){
+        repository.save(pessoaFisica);
         return new ModelAndView("redirect:/pessoasFisica/list");
     }
         
@@ -62,8 +62,8 @@ public class PessoaFController {
     }
 
     @PostMapping("/update")
-    public ModelAndView update(PessoaFisica pessoa) {
-        repository.update(pessoa);
+    public ModelAndView update(PessoaFisica pessoaFisica) {
+        repository.update(pessoaFisica);
         
         return new ModelAndView("redirect:/pessoasFisica/list");
     }

@@ -37,7 +37,7 @@ public class PessoaFController {
 
     @GetMapping("/list")
     public ModelAndView listar(ModelMap model) {       
-        model.addAttribute("pessoas", repository.pessoas());
+        model.addAttribute("pessoa", repository.pessoas());
         return new ModelAndView("/pessoasFisica/list", model);
     }
     

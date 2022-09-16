@@ -9,7 +9,7 @@
 
         <h1>FORM</h1>
         
-        <form th:action="${pessoas.id == null} ? @{/pessoasJuridica/save} : @{/pessoasJuridica/update}" th:object="${pessoas}" method="post">
+        <form th:action="${pessoaJuridica.id == null} ? @{/pessoasJuridica/save} : @{/pessoasJuridica/update}" th:object="${pessoaJuridica}" method="post">
             <input type="hidden" th:field="*{id}">
             <input type="text" th:field="*{nome}"  placeholder="Nome">
             <br>

@@ -14,7 +14,7 @@
                     <th>CPF</th>
                 </tr>
             </thead>
-            <tr th:each="p : ${pessoa}">
+            <tr th:each="p : ${pessoaFisica}">
                 <td th:text="${p.id}"> </td>
                 <td th:text="${p.nome}"> </td>
                 <td th:text="${p.cpf}"> </td>

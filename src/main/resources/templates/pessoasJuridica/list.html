@@ -14,7 +14,7 @@
                     <th>CNPJ</th>
                 </tr>
             </thead>
-            <tr th:each="p : ${pessoa}">
+            <tr th:each="p : ${pessoaJuridica}">
                 <td th:text="${p.id}"> </td>
                 <td th:text="${p.nome}"> </td>
                 <td th:text="${p.cnpj}"> </td>

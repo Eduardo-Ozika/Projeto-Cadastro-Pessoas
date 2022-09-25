@@ -4,7 +4,6 @@
  */
 package com.projeto.projetoCadPessoas.controller;
 
-import com.projeto.projetoCadPessoas.model.entity.PessoaFisica;
 import com.projeto.projetoCadPessoas.model.entity.PessoaJuridica;
 import com.projeto.projetoCadPessoas.model.repository.PessoaJRepository;
 import javax.transaction.Transactional;
@@ -36,7 +35,7 @@ public class PessoaJController {
 
     @GetMapping("/list")
     public ModelAndView listar(ModelMap model) {       
-        model.addAttribute("pessoa", repository.pessoas());
+        model.addAttribute("pessoaJuridica", repository.pessoas());
         return new ModelAndView("/pessoasJuridica/list", model);
     }
     
@@ -56,7 +55,7 @@ public class PessoaJController {
     
     @GetMapping("/edit/{id}")
     public ModelAndView edit(@PathVariable("id") Long id, ModelMap model) {
-        model.addAttribute("pessoas", repository.pessoa(id));
+        model.addAttribute("pessoaJuridica", repository.pessoa(id));
         return new ModelAndView("/pessoasJuridica/form", model);
     }
 

@@ -37,7 +37,7 @@ public class PessoaFController {
 
     @GetMapping("/list")
     public ModelAndView listar(ModelMap model) {       
-        model.addAttribute("pessoa", repository.pessoas());
+        model.addAttribute("pessoaFisica", repository.pessoas());
         return new ModelAndView("/pessoasFisica/list", model);
     }
     
@@ -57,7 +57,7 @@ public class PessoaFController {
     
     @GetMapping("/edit/{id}")
     public ModelAndView edit(@PathVariable("id") Long id, ModelMap model) {
-        model.addAttribute("pessoas", repository.pessoa(id));
+        model.addAttribute("pessoaFisica", repository.pessoa(id));
         return new ModelAndView("/pessoasFisica/form", model);
     }
 
